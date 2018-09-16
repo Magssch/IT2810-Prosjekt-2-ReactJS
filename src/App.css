@@ -8,13 +8,13 @@
 
 }
 
-.logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
+.page {
+    margin:0;
+    padding:0;
 }
 
 .header {
-    position: fixed;
+    position:fixed;
     z-index: 499;
     width: 100%;
     height: 80px;
@@ -34,7 +34,6 @@
     text-shadow: 2px 2px 2px #222222;
 }
 
-.container {
-    padding: 20px;
-    padding-top: 100px;
+.content {
+    padding: 100px 20px 20px;
 }
