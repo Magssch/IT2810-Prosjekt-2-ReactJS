@@ -1,28 +1,36 @@
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("BebasNeue.otf");
+}
+
 .App {
-  text-align: center;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.header {
+    height: 80px;
+    color: white;
+    background: #222 linear-gradient(to top, rgba(5, 132, 242, 1), rgba(10, 175, 241, 1));
+    box-shadow: 0 1px 14px 1px #222222;
+}
+
+.title {
+    position: relative;
+    float: left;
+    left: 0;
+    font-size: 1.8em;
+    font-family: Bebas Neue, Verdana, serif;
+    letter-spacing: 6px;
+    padding: 5px 30px;
+    text-shadow: 2px 2px 2px #222222;
+}
+
+.container {
   padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

@@ -1,18 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Dice from './Components/Dice';
+import Menu from './Components/Menu';
+
 
 class App extends Component {
+
+    state = {
+        diceVal: 1,
+    }
+
+    onRoll = () => {
+        this.setState({
+            diceVal: Math.floor(Math.random()*6)+1
+        })
+    };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+        <header className="header">
+          <h1 className="title">Lorem Ipsum</h1>
+            <Menu/>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="container">
+          <Dice value={this.state.diceVal}/>
+            <button onClick={this.onRoll}>Roll</button>
+        </div>
       </div>
     );
   }

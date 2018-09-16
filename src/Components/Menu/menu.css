@@ -1,0 +1,41 @@
+.menu {
+    position: relative;
+    float: right;
+    right: 0;
+    height: 100%;
+    width: 80px;
+    cursor: pointer;
+}
+
+.menu:hover {
+    background: linear-gradient(to right, rgba(66, 244, 241, 0), rgba(76, 217, 100, 0.5));
+    transition: 0.3s;
+}
+    .menu:hover .bar {
+        margin-top: 13px;
+        width: 38px;
+        top: 13%;
+        transition: 0.1s;
+        box-shadow: 3px 3px 6px 0 #222222;
+    }
+
+.bar {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+    top: 25%;
+    display: block;
+    margin: 8px auto;
+}
+
+.change #bar1 {
+    transform: rotate(30deg) translate(0, 5px) ;
+}
+.change #bar2 {
+    opacity: 0;
+}
+.change #bar3 {
+    transform: rotate(-30deg) translate(0, -5px) ;
+}
