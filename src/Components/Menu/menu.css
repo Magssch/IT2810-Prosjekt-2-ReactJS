@@ -5,18 +5,15 @@
     height: 100%;
     width: 80px;
     cursor: pointer;
+    transition: 0.1s;
 }
 
 .menu:hover {
-    background: linear-gradient(to right, rgba(66, 244, 241, 0), rgba(76, 217, 100, 0.5));
-    transition: 0.3s;
+    background: linear-gradient(to right, rgba(244, 86, 66, 0), rgba(76, 217, 100, 0.4));
 }
     .menu:hover .bar {
-        margin-top: 13px;
-        width: 38px;
-        top: 13%;
-        transition: 0.1s;
-        box-shadow: 3px 3px 6px 0 #222222;
+        box-shadow: 2px 2px 5px 0 #222222;
+        background: linear-gradient(to right, white, white, gray);
     }
 
 .bar {
@@ -24,18 +21,25 @@
     width: 30px;
     height: 3px;
     background-color: white;
-    transition: 0.3s;
+    transition: 0.2s;
     top: 25%;
     display: block;
     margin: 8px auto;
 }
 
 .change #bar1 {
-    transform: rotate(30deg) translate(0, 5px) ;
+    transform: rotate(-45deg) translate(-9px, 8px);
 }
 .change #bar2 {
     opacity: 0;
 }
 .change #bar3 {
-    transform: rotate(-30deg) translate(0, -5px) ;
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change:hover .bar {;
+    margin: 8px auto;
+    width: 30px;
+    top: 25%;
+    box-shadow: none;
 }

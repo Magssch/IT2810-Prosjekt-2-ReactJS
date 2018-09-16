@@ -23,7 +23,7 @@
   /*transform: rotateX(45deg) rotateY(45deg);*/
   transform-style: preserve-3d;
     /*animation: rotation ease 5s infinite;*/
-    transition: ease 1.4s;
+    transition: ease 1s;
 }
 
 .dice-active-1 {
@@ -51,39 +51,40 @@
     height: 200px;
     background: beige;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 14px;
     display: flex;
+    border: 10px solid black;
 }
 
 .face div {
-    font-family: Bebas Neue, Verdana;
-    color: white;
+    font-family: "Comic Sans MS", Verdana;
+    color: black;
     font-size: 130px;
     font-weight: bold;
     margin: auto;
 }
 
 .face.front {
-  background: yellow;
+  background: white;
   transform: translateZ(100px);
 }
 .face.back {
-  background: blue;
+  background: white;
   transform: translateZ(-100px);
 }
 .face.left {
-  background: green;
+  background: white;
   transform: translateX(-100px) rotateY(90deg);
 }
 .face.right {
-  background: magenta;
+  background: white;
   transform: translateX(100px) rotateY(90deg);
 }
 .face.top {
-  background: firebrick;
+  background: white;
   transform: translateY(-100px) rotateX(90deg);
 }
 .face.bottom {
-  background: cyan;
+  background: white;
   transform: translateY(100px) rotateX(90deg);
 }
