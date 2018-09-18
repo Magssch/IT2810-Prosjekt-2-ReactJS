@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Dice from './Components/Dice';
 import Menu from './Components/Menu';
+import Tabs from './Components/Tabs';
 import Sidenav from './Components/Sidenav';
+
 
 
 class App extends Component {
@@ -143,6 +145,29 @@ class App extends Component {
           <div className="page" onClick={this.sidenavClose}>
           <header className="header">
           <h1 className="title">Lorem Ipsum</h1>
+
+            <Menu/>
+        </header>
+          <div>
+              <Tabs>
+                  <div label="Tab1">
+                      Lorem Ipsum
+                  </div>
+                  <div label="Tab2">
+                      dolor sit
+                  </div>
+                  <div label="Tab3">
+                      amet, consectuvet
+                  </div>
+                  <div label="Tab4">
+                      adipiscing elit
+                  </div>
+              </Tabs>
+          </div>
+        <div className="container">
+          <Dice value={this.state.diceVal}/>
+            <button onClick={this.onRoll}>Roll</button>
+      
             </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked}/>
             <div className="content">
