@@ -7,10 +7,90 @@ import Sidenav from './Components/Sidenav';
 
 class App extends Component {
 
+    constructor(props) {
+        super(props);
+        this.categoryChange = this.categoryChange.bind(this);
+    }
+
     state = {
         diceVal: 1,
         sidenavExpanded: "",
         menuClicked: "",
+
+        categories: [
+            {
+                id: 1,
+                name: "Bilder",
+                options: [
+                    {
+                        id: 1,
+                        name: "chairs",
+                        text: "Stoler",
+                        checked: true
+                    },
+                    {
+                        id: 2,
+                        name: "lamps",
+                        text: "Lamper",
+                        checked: false
+                    },
+                    {
+                        id: 3,
+                        name: "pokemon",
+                        text: "Pokémon",
+                        checked: false
+                    },
+                ]
+            },
+            {
+                id: 2,
+                name: "Lyd",
+                options: [
+                    {
+                        id: 1,
+                        name: "folk",
+                        text: "Folkeinstrumenter",
+                        checked: true
+                    },
+                    {
+                        id: 2,
+                        name: "string",
+                        text: "Strenginstrumenter",
+                        checked: false
+                    },
+                    {
+                        id: 3,
+                        name: "blow",
+                        text: "Blåseinstrumenter",
+                        checked: false
+                    },
+                ]
+            },
+            {
+                id: 3,
+                name: "Tekst",
+                options: [
+                    {
+                        id: 1,
+                        name: "cites",
+                        text: "Sitater",
+                        checked: true
+                    },
+                    {
+                        id: 2,
+                        name: "lyrics",
+                        text: "Sangtekster",
+                        checked: false
+                    },
+                    {
+                        id: 3,
+                        name: "limericks",
+                        text: "Limericks",
+                        checked: false
+                    },
+                ]
+            },
+        ]
     }
 
     onRoll = () => {
@@ -32,6 +112,7 @@ class App extends Component {
             })
         }
     };
+
     sidenavClose = () => {
         if(!(this.state.sidenavExpanded === "")) {
             this.setState({
@@ -41,11 +122,24 @@ class App extends Component {
         }
     };
 
+    categoryChange(category) {
+        let temp = this.state.categories;
+        temp[category.id - 1].options.forEach(o => o.checked = false);
+        temp[category.id - 1].options[category.option.id - 1].checked = category.option.checked;
+
+        this.setState({
+            category: temp,
+        });
+
+        console.log(this.state.categories);
+        console.log(temp);
+    }
+
 
   render() {
     return (
       <div className="App">
-          <Sidenav value={this.state.sidenavExpanded}/>
+          <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
           <div className="page" onClick={this.sidenavClose}>
           <header className="header">
           <h1 className="title">Lorem Ipsum</h1>
