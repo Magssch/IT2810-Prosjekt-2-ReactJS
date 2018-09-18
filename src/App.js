@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dice from './Components/Dice';
 import Menu from './Components/Menu';
 import Sidenav from './Components/Sidenav';
+import axios from 'axios';
 
 
 class App extends Component {
@@ -135,8 +135,27 @@ class App extends Component {
         console.log(temp);
     }
 
+    getCategories() {
+        
+    }
 
-  render() {
+    getMedia() {
+        axios.get('/user?ID=12345')
+            .then(function (response) {
+                // handle success
+                console.log(response);
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }
+
+
+    render() {
     return (
       <div className="App">
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
@@ -174,14 +193,12 @@ class App extends Component {
                     Sed elementum ipsum ac neque accumsan faucibus. Mauris a dapibus erat. Sed sed est vitae ligula aliquam consectetur. Donec cursus, augue at sollicitudin commodo, velit lacus aliquam mauris, vitae bibendum lorem magna id nulla. Ut tempus velit eget libero imperdiet, ac dictum dui bibendum. Nunc pretium in libero eu varius. Donec ut metus vitae risus blandit laoreet eget eget nisi. Cras quam justo, vestibulum eget aliquet feugiat, faucibus vitae lorem.
 
                     Sed et euismod ex, sit amet euismod turpis. Cras malesuada tristique nisl, eget cursus elit. Vestibulum dictum velit at mauris sollicitudin, at pretium libero fringilla. Aenean et lacinia ex. Ut laoreet tortor id neque convallis consectetur. Etiam venenatis, neque ut condimentum suscipit, urna purus pharetra augue, ultrices scelerisque ex orci non eros. Phasellus sit amet odio quis ligula consectetur tristique eget quis nibh. Pellentesque ut diam in quam aliquet elementum.</p>
+
             </div>
         </div>
       </div>
     );
   }
 }
-/*
-  <Dice value={this.state.diceVal}/>
-   <button onClick={this.onRoll}>Roll</button>*/
 
 export default App;
