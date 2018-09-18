@@ -8,8 +8,14 @@ class Checkbox extends Component {
     }
 
     handleChange = () => {
+        let temp = this.state.checked;
         this.setState({
-            checked: !this.state.checked,
+            checked: !temp,
+        });
+        console.log(!temp)
+        this.props.handleChange({
+            id: this.props.id,
+            checked: !temp
         });
     }
 
