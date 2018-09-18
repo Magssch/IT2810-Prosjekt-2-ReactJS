@@ -14,7 +14,7 @@ class Content extends Component {
 */
     render() {
         return (
-                <p className="TextContent">{this.props.text}</p>
+                <pre className="TextContent">{this.props.text}</pre>
         );
     }
 }

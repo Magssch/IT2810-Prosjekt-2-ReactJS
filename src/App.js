@@ -11,14 +11,19 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
+        this.getText = this.getText.bind(this);
+        this.getMedia = this.getMedia.bind(this);
     }
-
     state = {
         diceVal: 1,
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-        textContent: "Velkommen til vår side :-)",
+        textContent: ["Velkommen til vår side :-)",
+                       "",
+                       "",
+                       ""
+        ],
 
         categories: [
             {
@@ -150,16 +155,17 @@ class App extends Component {
     }
     getText() {
         let categoryState = this.getCategories();
+        console.log(this.state.categories);
         let path = '/media/text/'+categoryState[2][0].name+'/text'+this.state.tab+'.txt';
         axios.get(path)
-            .then(function (response) {
+            .then(response => {
                 // handle success
                 console.log(response.data.text);
                 console.log("_____" + this.state.textContent);
 
                 this.setState({textContent: response.data.text});
             })
-            .catch(function (error) {
+            .catch(error => {
                 // handle error
                 console.log(error);
             })
