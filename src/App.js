@@ -11,19 +11,12 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
-        this.getText = this.getText.bind(this);
-        this.getMedia = this.getMedia.bind(this);
     }
     state = {
         diceVal: 1,
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-        textContent: ["Velkommen til vår side :-)",
-                       "",
-                       "",
-                       ""
-        ],
 
         categories: [
             {
@@ -138,7 +131,6 @@ class App extends Component {
         this.setState({
             category: temp,
         });
-        this.getMedia();
 
     }
 
@@ -148,30 +140,14 @@ class App extends Component {
             this.state.categories[1].options.filter(option => option.checked),
             this.state.categories[2].options.filter(option => option.checked)];
     }
-    getMedia() {
-       // this.getImage();
-        //this.getAudio();
-        this.getText();
+    getTextCatName() {
+        return this.getCategories()[2][0];
     }
-    getText() {
-        let categoryState = this.getCategories();
-        console.log(this.state.categories);
-        let path = '/media/text/'+categoryState[2][0].name+'/text'+this.state.tab+'.txt';
-        axios.get(path)
-            .then(response => {
-                // handle success
-                console.log(response.data.text);
-                console.log("_____" + this.state.textContent);
-
-                this.setState({textContent: response.data.text});
-            })
-            .catch(error => {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
+    getImgCatName() {
+        return this.getCategories()[0][0];
+    }
+    getAudCatName() {
+        return this.getCategories()[1][0];
     }/*
     getAudio() {
         let categoryState = this.getCategories();
@@ -215,10 +191,10 @@ class App extends Component {
           <header className="header">
           <h1 className="title">Lorem Ipsum</h1>
             </header>
-              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked}/>
+              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
             <div className="content">
                 <p>Lorem ipsum dolor sit amet</p>
-                <Content text={this.state.textContent}/>
+                <Content tabIndex={this.state.tab} text={this.getTextCatName()} img={this.getImgCatName()} aud={this.getAudCatName()}/>
             </div>
         </div>
       </div>
