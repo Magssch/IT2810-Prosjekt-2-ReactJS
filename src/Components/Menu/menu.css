@@ -1,0 +1,46 @@
+.menu {
+    position: fixed;
+    float: right;
+    right: 0;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    transition: 0.1s;
+    z-index: 501;
+}
+
+.menu:hover {
+    background: linear-gradient(to right, rgba(244, 86, 66, 0), rgba(76, 217, 100, 0.4));
+}
+    .menu:hover .bar {
+        box-shadow: 2px 2px 5px 0 #222222;
+        background: linear-gradient(to bottom, white, white, gray);
+    }
+
+.bar {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.2s;
+    top: 25%;
+    display: block;
+    margin: 8px auto;
+}
+
+.change #bar1 {
+    transform: rotate(-45deg) translate(-9px, 8px);
+}
+.change #bar2 {
+    opacity: 0;
+}
+.change #bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change:hover .bar {;
+    margin: 8px auto;
+    width: 30px;
+    top: 25%;
+    box-shadow: none;
+}

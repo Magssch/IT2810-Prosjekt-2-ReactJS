@@ -1,0 +1,32 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    min-width: 0;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: 0;
+    background-color: black;
+    overflow: hidden;
+    padding-top: 15px;
+    transition: 0.3s;
+    opacity: 1;
+    font-size: 30px;
+    white-space: nowrap;
+    font-family: Bebas Neue, Verdana, serif;
+    letter-spacing: 2px;
+}
+
+.expand {
+    width: 40%;
+    min-width: 300px;
+}
+
+.sidenav h3 {
+    padding: 8px 8px 8px 32px;
+    color: #818181;
+    display: block;
+    transition: 0.2s;
+    margin: 0 0 8px;
+    font-size:25px;
+}
