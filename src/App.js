@@ -130,17 +130,22 @@ class App extends Component {
         this.setState({
             category: temp,
         });
+        this.getMedia();
 
-        console.log(this.state.categories);
-        console.log(temp);
     }
 
+
     getCategories() {
-        
+        return [this.state.categories[0].options.filter(option => option.checked),
+            this.state.categories[1].options.filter(option => option.checked),
+            this.state.categories[2].options.filter(option => option.checked)];
     }
 
     getMedia() {
-        axios.get('/user?ID=12345')
+        let categoryState = this.getCategories();
+        let path = '/media/Tekst/'+categoryState[2][0].name+'/text'+this.state.tab+'.txt';
+        console.log(path);
+        axios.get(path)
             .then(function (response) {
                 // handle success
                 console.log(response);
@@ -156,6 +161,7 @@ class App extends Component {
 
 
     render() {
+        this.getMedia();
     return (
       <div className="App">
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
