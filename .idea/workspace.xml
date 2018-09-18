@@ -2,6 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="775ea845-bc54-4aaa-b725-4fea04a3e29e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/Components/Tab.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/Components/Tab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/content" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/content" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair1/armchair.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair1/chair1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair1/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair1/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair2/desk-chair.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair2/chair2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair2/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair2/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair3/chair.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair3/chair3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair3/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair3/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair4/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair4/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/chair/chair4/seat.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chair4/chair4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp1/Untitled Document" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp1/Untitled Document" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp1/lamp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp1/lamp1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp2/Untitled Document" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp2/Untitled Document" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp2/lamp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp2/lamp2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp3/lamp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp3/lamp3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp3/ref" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp3/ref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp4/lamp.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp4/lamp4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/lamp/lamp4/ref" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamp4/ref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon1/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon1/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon1/snorlax.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon1/pokemon1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon2/mew.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon2/pokemon2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon2/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon2/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon3/caterpie.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon3/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon3/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon4/dratini.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon4/pokemon4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/pokemon/pokemon4/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/pokemon/pokemon4/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/culturalInstrument/didgeridoo.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/folk/sound1.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/culturalInstrument/kantele.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/folk/sound4.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/culturalInstrument/lyre.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/folk/sound3.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/culturalInstrument/snailhorn.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/folk/sound2.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/culturalInstrument/taegum.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/folk/taegum.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/stringInstrument/banjo.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/string/sound1.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/stringInstrument/guitar.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/string/sound2.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/stringInstrument/harp.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/string/sound3.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/stringInstrument/violin.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/string/sound4.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/windInstrument/brass.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/blow/sound1.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/windInstrument/helicon.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/blow/sound2.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/windInstrument/ocarina.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/blow/sound3.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/sounds/windInstrument/trumpet.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/sounds/blow/sound4.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/cites/text1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/cites/text1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/cites/text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/cites/text2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/cites/text3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/cites/text3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/cites/text4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/cites/text4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/limerick/text1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/limericks/text1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/limerick/text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/limericks/text2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/limerick/text3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/limericks/text3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/limerick/text4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/limericks/text4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/songs/song1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/lyrics/text1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/songs/song2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/songs/song3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/lyrics/text3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/text/songs/song4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/text/lyrics/text4.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -29,9 +82,10 @@
         <counts>
           <entry key="css" value="10" />
           <entry key="html" value="1" />
-          <entry key="js" value="17" />
+          <entry key="js" value="20" />
           <entry key="json" value="3" />
           <entry key="svg" value="1" />
+          <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -39,44 +93,27 @@
           <entry key="CSS" value="10" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="17" />
+          <entry key="JavaScript" value="20" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2615" />
-          <entry key="js" value="4902" />
+          <entry key="js" value="5552" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2615" />
-          <entry key="JavaScript" value="4902" />
+          <entry key="JavaScript" value="5552" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="26" selection-start-column="26" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/index.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -126,8 +163,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="153" column="31" lean-forward="true" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+            <state relative-caret-position="356">
+              <caret line="160" column="14" lean-forward="true" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -136,10 +173,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/src/Components/Content/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/Dice/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="1" selection-start-column="1" selection-end-column="1" />
+              <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -149,8 +195,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -178,6 +224,7 @@
         <option value="$PROJECT_DIR$/src/Components/Sidenav/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/index.js" />
         <option value="$PROJECT_DIR$/src/Components/Sidenav/Category/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Content/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
       </list>
     </option>
@@ -235,6 +282,33 @@
               <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Dice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Menu" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -250,6 +324,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\it2810-webutvikling-h18-prosjekt-2-gruppe--46\public" />
       <recent name="C:\xampp\htdocs\it2810-webutvikling-h18-prosjekt-2-gruppe--46\src\Components\Sidenav\Category" />
       <recent name="C:\xampp\htdocs\it2810-webutvikling-h18-prosjekt-2-gruppe--46\src\Components\Sidenav" />
     </key>
@@ -284,13 +359,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50648000" />
+    <option name="totallyTimeSpent" value="53671000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="-7" width="1510" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16361168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16361168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -304,7 +379,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24295302" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -338,8 +413,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Components/Dice/dice.css" />
-    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.js" />
-    <entry file="file://$PROJECT_DIR$/src/Components/Dice/index.js" />
     <entry file="file://$PROJECT_DIR$/src/Components/Menu/menu.css" />
     <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/category.js" />
     <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/category.css" />
@@ -415,10 +488,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/text/lyrics/text2.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/text/lyrics/text4.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/text/lyrics/text1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Menu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="17" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Dice/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="153" column="31" lean-forward="true" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+        <state relative-caret-position="356">
+          <caret line="160" column="14" lean-forward="true" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
