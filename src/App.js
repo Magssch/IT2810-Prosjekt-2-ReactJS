@@ -145,31 +145,20 @@ class App extends Component {
           <div className="page" onClick={this.sidenavClose}>
           <header className="header">
           <h1 className="title">Lorem Ipsum</h1>
-
-            <Menu/>
-        </header>
-          <div>
-              <Tabs>
-                  <div label="Tab1">
-                      Lorem Ipsum
-                  </div>
-                  <div label="Tab2">
-                      dolor sit
-                  </div>
-                  <div label="Tab3">
-                      amet, consectuvet
-                  </div>
-                  <div label="Tab4">
-                      adipiscing elit
-                  </div>
-              </Tabs>
-          </div>
-        <div className="container">
-          <Dice value={this.state.diceVal}/>
-            <button onClick={this.onRoll}>Roll</button>
-      
-            </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked}/>
+        </header>
+
+              <div className="tabs-container">
+                  <Tabs>
+                      <div label="Tab1">Lorem Ipsum</div>
+                      <div label="Tab2">dolor sit</div>
+                      <div label="Tab3">amet, consectuvet</div>
+                      <div label="Tab4"><Dice value={this.state.diceVal}/><button onClick={this.onRoll}>Roll</button></div>
+                  </Tabs>
+              </div>
+
+              <div className="container">
+                  <Menu onClick={this.sidenavExpand} value={this.state.menuClicked}/>
             <div className="content">
                 <p>Lorem ipsum dolor sit amet</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi dolor, vulputate nec fermentum quis, laoreet vitae ipsum. Ut lobortis neque congue auctor aliquam. Ut quis quam et magna tincidunt porttitor. Vivamus vitae nisi molestie, congue diam in, vehicula felis. In suscipit tristique mauris eget vulputate. Proin rutrum neque non lacus dignissim, at pulvinar diam molestie. Sed vehicula sed lectus sed rhoncus. Donec posuere vestibulum purus non condimentum. Aenean et fermentum ligula. Suspendisse consequat volutpat velit, vitae mattis nisl tincidunt nec. Nunc pretium venenatis purus at faucibus. Morbi ac sapien enim. Curabitur rutrum metus ut pretium venenatis. Vestibulum at ullamcorper elit, consectetur mattis nibh.
@@ -202,11 +191,10 @@ class App extends Component {
             </div>
         </div>
       </div>
+      </div>
     );
   }
 }
-/*
-  <Dice value={this.state.diceVal}/>
-   <button onClick={this.onRoll}>Roll</button>*/
+
 
 export default App;
