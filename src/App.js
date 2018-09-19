@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './Components/Menu';
 import Tabs from './Components/Tabs';
+import Tab from './Components/Tabs/Tab'
 import Sidenav from './Components/Sidenav';
 import axios from 'axios';
 import Content from './Components/Content';
@@ -16,11 +17,9 @@ class App extends Component {
         this.updateTab = this.updateTab.bind(this);
     }
     state = {
-        diceVal: 1,
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-
         categories: [
             {
                 id: 1,
@@ -97,11 +96,6 @@ class App extends Component {
         ]
     }
 
-    onRoll = () => {
-        this.setState({
-            diceVal: Math.floor(Math.random()*6)+1
-        })
-    };
 
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
@@ -134,13 +128,17 @@ class App extends Component {
         this.setState({
             category: temp,
         });
-
     }
 
     updateTab() {
         let tmp = this.state.tab;
         if(tmp>3) tmp = 0;
         this.setState({tab: tmp+1});
+    }
+
+    updateTabs = (tab) => {
+        let activeTab = parseInt(tab.slice(-1));
+        if (this.state.tab !== activeTab) this.setState({tab: activeTab});
     }
 
 
@@ -202,11 +200,11 @@ class App extends Component {
           </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
             <div className="tabs-container">
-                  <Tabs>
-                      <div label="Tab1">Lorem Ipsum</div>
-                      <div label="Tab2">dolor sit</div>
-                      <div label="Tab3">amet, consectuvet</div>
-                      <div label="Tab4"><Dice value={this.state.diceVal}/><button onClick={this.onRoll}>Roll</button></div>
+                  <Tabs onClick={this.updateTabs}>
+                      <Tab label="Artwork 1" />
+                      <Tab label="Artwork 2" />
+                      <Tab label="Artwork 3" />
+                      <Tab label="Artwork 4" />
                   </Tabs>
             </div>
             <div className="content">
