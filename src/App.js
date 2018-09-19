@@ -21,6 +21,7 @@ class App extends Component {
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
+        audioctx: new (window.AudioContext || window.webkitAudioContext)(),
         
 
         categories: [
@@ -100,7 +101,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        document.title = "Personified Art";
+
     }
 
     onRoll = () => {
@@ -163,23 +164,10 @@ class App extends Component {
     }
     getAud() {
         return this.getCategories()[1][0];
-    }/*
-    getAudio() {
-        let categoryState = this.getCategories();
-        let path = '/media/sounds/'+categoryState[1][0].name+'/sound'+this.state.tab+'.mp3';
-        axios.request(path)
-            .then(function (response) {
-                // handle success
-                console.log(response);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
-    }/*
+    }
+    
+
+    /*
     getImage() {
         let categoryState = this.getCategories();
         let path = '/media/images/'+categoryState[0][0].name+'/'+this.state.tab+'.mp3';
@@ -209,7 +197,7 @@ class App extends Component {
                 <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
                 <div className="tabs-container">
                     <Tabs>
-                        <Tab label="First artwork">Lorem Ipsum</Tab>
+                        <Tab label="First artwork">  Lorem Ipsum</Tab>
                         <Tab label="Second artwork">dolor sit</Tab>
                         <Tab label="Third artwork">amet, consectuvet</Tab>
                         <Tab label="Fourth artwork">amet, consectuvet</Tab>
@@ -217,7 +205,7 @@ class App extends Component {
                 </div>
                 <div className="content">
                     <p>Lorem ipsum dolor sit amet</p>
-                    <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
+                    <Content audioctx={this.state.audioctx} tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
                     <br/>
                     <button onClick={this.updateTab}>Bytt tab</button>
                 </div>

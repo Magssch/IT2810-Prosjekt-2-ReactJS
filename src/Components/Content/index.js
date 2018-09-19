@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import axios from "axios";
 
+let source;
+
 class Content extends Component {
 
     constructor(props) {
@@ -41,9 +43,25 @@ class Content extends Component {
 
     getMedia(flushState) {
         // this.getImage();
-        //this.getAudio();
+        this.getAudio(flushState);
         this.getText(flushState);
     }
+
+    getAudio(flushState) {
+        let path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
+        console.log(path);
+        axios.get(path, {
+            responseType: 'arraybuffer'
+        })
+        .then((response) => {
+            console.log(response);
+            this.playByteArray(response.data);
+                })
+        .catch((error) => console.log(error));
+    }
+
+
+    
 
     getText(flushState) {
         let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
@@ -79,10 +97,34 @@ class Content extends Component {
         }
     }
 
+    
+    playByteArray(arrayBuffer) {
+        source = this.props.audioctx.createBufferSource();
+    
+        this.props.audioctx.decodeAudioData(arrayBuffer, (buffer) => {
+            
+            source.buffer = buffer;
+            source.connect(this.props.audioctx.destination);
+            source.loop = true;
+            this.play();
+        });
+    }
+    
+    // Play the loaded file
+    play() {
+        // Create a source node from the buffer
+        // Connect to the final output node (the speakers)
+        // Play immediately
+        source.start(0);
+    }
+
     render() {
         this.update();
         return (
+            <div>
                 <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
+                <audio>play</audio>
+            </div>
         );
     }
 }
