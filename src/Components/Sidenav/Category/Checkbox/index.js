@@ -3,19 +3,10 @@ import './checkbox.css';
 
 class Checkbox extends Component {
 
-    state = {
-        checked: this.props.checked,
-    }
-
     handleChange = () => {
-        let temp = this.state.checked;
-        this.setState({
-            checked: !temp,
-        });
-        console.log(!temp)
         this.props.handleChange({
             id: this.props.id,
-            checked: !temp
+            checked: !this.props.checked
         });
     }
 
