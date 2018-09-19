@@ -11,6 +11,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
+        this.updateTab = this.updateTab.bind(this);
     }
     state = {
         diceVal: 1,
@@ -134,19 +135,25 @@ class App extends Component {
 
     }
 
+    updateTab() {
+        let tmp = this.state.tab;
+        if(tmp>3) tmp = 0;
+        this.setState({tab: tmp+1});
+    }
+
 
     getCategories() {
         return [this.state.categories[0].options.filter(option => option.checked),
             this.state.categories[1].options.filter(option => option.checked),
             this.state.categories[2].options.filter(option => option.checked)];
     }
-    getTextCatName() {
+    getText() {
         return this.getCategories()[2][0];
     }
-    getImgCatName() {
+    getImg() {
         return this.getCategories()[0][0];
     }
-    getAudCatName() {
+    getAud() {
         return this.getCategories()[1][0];
     }/*
     getAudio() {
@@ -194,7 +201,9 @@ class App extends Component {
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
             <div className="content">
                 <p>Lorem ipsum dolor sit amet</p>
-                <Content tabIndex={this.state.tab} text={this.getTextCatName()} img={this.getImgCatName()} aud={this.getAudCatName()}/>
+                <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
+                <br/>
+                <button onClick={this.updateTab}>Bytt tab</button>
             </div>
         </div>
       </div>
