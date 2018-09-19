@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './Components/Menu';
 import Tabs from './Components/Tabs';
+import Tab from './Components/Tab';
 import Sidenav from './Components/Sidenav';
 import axios from 'axios';
 import Content from './Components/Content';
@@ -20,6 +21,7 @@ class App extends Component {
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
+        
 
         categories: [
             {
@@ -95,6 +97,10 @@ class App extends Component {
                 ]
             },
         ]
+    }
+
+    componentDidMount() {
+        document.title = "Personified Art";
     }
 
     onRoll = () => {
@@ -194,29 +200,29 @@ class App extends Component {
 
     render() {
     return (
-      <div className="App">
-          <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
-          <div className="page" onClick={this.sidenavClose}>
-          <header className="header">
-              <h1 className="title">Lorem Ipsum</h1>
-          </header>
-              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
-            <div className="tabs-container">
-                  <Tabs>
-                      <div label="Tab1">Lorem Ipsum</div>
-                      <div label="Tab2">dolor sit</div>
-                      <div label="Tab3">amet, consectuvet</div>
-                      <div label="Tab4"><Dice value={this.state.diceVal}/><button onClick={this.onRoll}>Roll</button></div>
-                  </Tabs>
-            </div>
-            <div className="content">
-                <p>Lorem ipsum dolor sit amet</p>
-                <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
-                <br/>
-                <button onClick={this.updateTab}>Bytt tab</button>
+        <div className="App">
+            <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
+            <div className="page" onClick={this.sidenavClose}>
+            <header className="header">
+                <h1 className="title">Personified art</h1>
+            </header>
+                <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
+                <div className="tabs-container">
+                    <Tabs>
+                        <Tab label="First artwork">Lorem Ipsum</Tab>
+                        <Tab label="Second artwork">dolor sit</Tab>
+                        <Tab label="Third artwork">amet, consectuvet</Tab>
+                        <Tab label="Fourth artwork">amet, consectuvet</Tab>
+                    </Tabs>
+                </div>
+                <div className="content">
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
+                    <br/>
+                    <button onClick={this.updateTab}>Bytt tab</button>
+                </div>
             </div>
         </div>
-      </div>
     );
   }
 }
