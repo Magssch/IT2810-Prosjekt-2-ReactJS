@@ -204,7 +204,6 @@ class App extends Component {
                     </Tabs>
                 </div>
                 <div className="content">
-                    <p>Lorem ipsum dolor sit amet</p>
                     <Content audioctx={this.state.audioctx} tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
                     <br/>
                     <button onClick={this.updateTab}>Bytt tab</button>

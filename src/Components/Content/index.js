@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import axios from "axios";
 
-let source;
 
 class Content extends Component {
+    source;
 
     constructor(props) {
         super(props);
@@ -20,7 +20,7 @@ class Content extends Component {
                        null
         ],
         AudCatID: 1,
-        audioContent: ["Velkommen til vår side :-)",
+        audioContent: ["",
             "",
             "",
             ""
@@ -48,20 +48,21 @@ class Content extends Component {
     }
 
     getAudio(flushState) {
+
         let path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
         console.log(path);
         axios.get(path, {
             responseType: 'arraybuffer'
         })
         .then((response) => {
+            this.setState({
+                
+            })
             console.log(response);
             this.playByteArray(response.data);
                 })
         .catch((error) => console.log(error));
     }
-
-
-    
 
     getText(flushState) {
         let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
@@ -99,13 +100,13 @@ class Content extends Component {
 
     
     playByteArray(arrayBuffer) {
-        source = this.props.audioctx.createBufferSource();
+        this.source = this.props.audioctx.createBufferSource();
     
         this.props.audioctx.decodeAudioData(arrayBuffer, (buffer) => {
             
-            source.buffer = buffer;
-            source.connect(this.props.audioctx.destination);
-            source.loop = true;
+            this.source.buffer = buffer;
+            this.source.connect(this.props.audioctx.destination);
+            this.source.loop = true;
             this.play();
         });
     }
@@ -115,7 +116,7 @@ class Content extends Component {
         // Create a source node from the buffer
         // Connect to the final output node (the speakers)
         // Play immediately
-        source.start(0);
+        this.source.start(0);
     }
 
     render() {
