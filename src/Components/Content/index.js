@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from "axios";
+import './content.css';
 
 class Content extends Component {
 
@@ -17,30 +18,22 @@ class Content extends Component {
                        null,
                        null
         ],
-        AudCatID: 1,
-        audioContent: ["Velkommen til vår side :-)",
-            "",
-            "",
-            ""
+        audCatID: 1,
+        audioContent: [null,
+            null,
+            null,
+            null,
         ],
-        ImgCatID: 1,
-        imageContent: ["Velkommen til vår side :-)",
-            "",
-            "",
-            ""
+        imgCatID: 1,
+        imageContent: [null,
+            null,
+            null,
+            null
         ],
-    }
-
-    flushState = () => {
-        this.setState({
-            textContent: [null,null,null,null],
-            imageContent: [null,null,null,null],
-            audioContent: [null,null,null,null],
-        });
     }
 
     getMedia(flushState) {
-        // this.getImage();
+        this.getImage();
         //this.getAudio();
         this.getText(flushState);
     }
@@ -68,12 +61,36 @@ class Content extends Component {
             });
     }
 
+    getImage(flushState) {
+        let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
+        axios.get(path)
+            .then(response => {
+                let tmp = this.state.imageContent;
+                if(flushState) {
+                    tmp = [null, null, null, null];
+                }
+                tmp[this.props.tabIndex - 1] = response.data;
+                console.log(response.data);
+                this.setState({
+                    imgCatID: this.props.img.id,
+                    imageContent: tmp
+                });
+            })
+            .catch(error => {
+                // handle error
+                console.log(error);
+            })
+            .then(function () {
+                // always executed
+            });
+    }
+
     update = () => {
-        if(this.state.textCatID !== this.props.text.id) {
+        if(this.state.textCatID !== this.props.text.id || this.state.imgCatID !== this.props.img.id) {
             this.getMedia(true);
             console.log("Flush state");
         }
-        else if(this.state.textContent[this.props.tabIndex-1] == null) {
+        else if(this.state.textContent[this.props.tabIndex-1] == null || this.state.imageContent[this.props.tabIndex-1] == null) {
             this.getMedia(false);
             console.log("GET request");
         }
@@ -82,7 +99,10 @@ class Content extends Component {
     render() {
         this.update();
         return (
+            <div>
+                <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
                 <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
+            </div>
         );
     }
 }

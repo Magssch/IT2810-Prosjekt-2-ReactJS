@@ -155,40 +155,7 @@ class App extends Component {
     }
     getAud() {
         return this.getCategories()[1][0];
-    }/*
-    getAudio() {
-        let categoryState = this.getCategories();
-        let path = '/media/sounds/'+categoryState[1][0].name+'/sound'+this.state.tab+'.mp3';
-        axios.request(path)
-            .then(function (response) {
-                // handle success
-                console.log(response);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
-    }/*
-    getImage() {
-        let categoryState = this.getCategories();
-        let path = '/media/images/'+categoryState[0][0].name+'/'+this.state.tab+'.mp3';
-        axios.get(path)
-            .then(function (response) {
-                // handle success
-                console.log(response);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed
-            });
-    }*/
-
+    }
 
     render() {
     return (
@@ -208,7 +175,6 @@ class App extends Component {
                   </Tabs>
             </div>
             <div className="content">
-                <p>Lorem ipsum dolor sit amet</p>
                 <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
                 <br/>
                 <button onClick={this.updateTab}>Bytt tab</button>

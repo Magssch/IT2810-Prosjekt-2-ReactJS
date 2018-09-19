@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="775ea845-bc54-4aaa-b725-4fea04a3e29e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/content.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair1/chair1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs1/chairs1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair1/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs1/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair2/chair2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs2/chairs2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair2/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs2/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair3/chair3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs3/chairs3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair3/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs3/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair4/chair4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs4/chairs4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/chairs/chair4/ref.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/chairs/chairs4/ref.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp1/Untitled Document" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps1/Untitled Document" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp1/lamp1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps1/lamps1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp2/Untitled Document" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps2/Untitled Document" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp2/lamp2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps2/lamps2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp3/lamp3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps3/lamps3.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp3/ref" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps3/ref" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp4/lamp4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps4/lamps4.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/media/images/lamps/lamp4/ref" beforeDir="false" afterPath="$PROJECT_DIR$/public/media/images/lamps/lamps4/ref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/index.js" afterDir="false" />
     </list>
@@ -20,43 +37,47 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="10" />
+          <entry key="css" value="11" />
           <entry key="html" value="1" />
-          <entry key="js" value="20" />
+          <entry key="js" value="23" />
           <entry key="json" value="3" />
-          <entry key="svg" value="1" />
+          <entry key="svg" value="9" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="10" />
+          <entry key="CSS" value="11" />
           <entry key="HTML" value="1" />
           <entry key="JSON" value="3" />
-          <entry key="JavaScript" value="20" />
+          <entry key="JavaScript" value="23" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="SVG" value="1" />
+          <entry key="SVG" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="2615" />
-          <entry key="js" value="7351" />
+          <entry key="css" value="2686" />
+          <entry key="js" value="7758" />
+          <entry key="svg" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="2615" />
-          <entry key="JavaScript" value="7351" />
+          <entry key="CSS" value="2686" />
+          <entry key="JavaScript" value="7758" />
+          <entry key="SVG" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -64,10 +85,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Content/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="256">
+              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -76,58 +97,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/index.js">
+        <entry file="file://$PROJECT_DIR$/src/Components/Content/content.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
+            <state relative-caret-position="32">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/category.css">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs1/chairs1.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/checkbox.css">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs2/chairs2.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs3/chairs3.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs4/chairs4.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps1/lamps1.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps2/lamps2.svg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps3/lamps3.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/Content/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps4/lamps4.svg">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -135,8 +150,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -166,6 +181,10 @@
         <option value="$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Components/Content/index.js" />
+        <option value="$PROJECT_DIR$/src/Components/Content/content.css" />
+        <option value="$PROJECT_DIR$/public/media/images/chairs/chairs3/chairs3.svg" />
+        <option value="$PROJECT_DIR$/public/media/images/chairs/chairs4/chairs4.svg" />
+        <option value="$PROJECT_DIR$/public/media/images/lamps/lamps4/lamps4.svg" />
       </list>
     </option>
   </component>
@@ -192,10 +211,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="406" />
-    <option name="y" value="82" />
-    <option name="width" value="1114" />
-    <option name="height" value="1089" />
+    <option name="x" value="405" />
+    <option name="y" value="80" />
+    <option name="width" value="1115" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -216,6 +235,124 @@
               <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
               <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs" type="462c0819:PsiDirectoryNode" />
+              <item name="chairs4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps" type="462c0819:PsiDirectoryNode" />
+              <item name="lamps4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="pokemon" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="pokemon" type="462c0819:PsiDirectoryNode" />
+              <item name="pokemon1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
@@ -258,6 +395,20 @@
               <item name="Sidenav" type="462c0819:PsiDirectoryNode" />
               <item name="Category" type="462c0819:PsiDirectoryNode" />
               <item name="Checkbox" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Tab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="b2602c69:ProjectViewProjectNode" />
+              <item name="it2810-webutvikling-h18-prosjekt-2-gruppe--46" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Components" type="462c0819:PsiDirectoryNode" />
+              <item name="Tabs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,17 +456,19 @@
       <workItem from="1537098741495" duration="23840000" />
       <workItem from="1537174278210" duration="17826000" />
       <workItem from="1537285766397" duration="3557000" />
+      <workItem from="1537360256946" duration="676000" />
+      <workItem from="1537361640015" duration="158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62391000" />
+    <option name="totallyTimeSpent" value="68094000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="-7" width="1510" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16361168" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16361168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -329,11 +482,31 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24295302" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.24295302" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27209944" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20536913" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -371,22 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/category.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/checkbox.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -411,16 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="17" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" lean-forward="true" selection-start-column="40" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -431,20 +578,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/category.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/Category/Checkbox/checkbox.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Sidenav/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="160">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Tab/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Tabs/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="43" column="45" selection-start-line="43" selection-start-column="45" selection-end-line="43" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+        <state relative-caret-position="2592">
+          <caret line="168" column="63" selection-start-line="168" selection-start-column="63" selection-end-line="168" selection-end-column="63" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -453,13 +639,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Content/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        <state relative-caret-position="256">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/Content/content.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs1/chairs1.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs2/chairs2.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs3/chairs3.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/chairs/chairs4/chairs4.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps1/lamps1.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps2/lamps2.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps3/lamps3.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/media/images/lamps/lamps4/lamps4.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
