@@ -21,7 +21,6 @@ class App extends Component {
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-        audioctx: new (window.AudioContext || window.webkitAudioContext)(),
         
 
         categories: [
@@ -141,7 +140,6 @@ class App extends Component {
         this.setState({
             category: temp,
         });
-
     }
 
     updateTab() {
@@ -204,8 +202,12 @@ class App extends Component {
                     </Tabs>
                 </div>
                 <div className="content">
-                    <Content audioctx={this.state.audioctx} tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
-                    <br/>
+                    <Content 
+                            tabIndex={this.state.tab} 
+                            text={this.getText()} 
+                            img={this.getImg()} 
+                            aud={this.getAud()}
+                    />
                     <button onClick={this.updateTab}>Bytt tab</button>
                 </div>
             </div>
