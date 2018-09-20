@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import axios from "axios";
 import './content.css';
 
+
 class Content extends Component {
+    source;
 
     constructor(props) {
         super(props);
@@ -34,7 +36,6 @@ class Content extends Component {
 
     getMedia(flushState) {
         this.getImage();
-        //this.getAudio();
         this.getText(flushState);
     }
 
@@ -53,12 +54,22 @@ class Content extends Component {
                 });
             })
             .catch(error => {
-                // handle error
                 console.log(error);
-            })
-            .then(function () {
-                // always executed
             });
+    }
+
+    getAudioPath() {
+        let path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
+        return path;
+    }
+
+    update = () => {
+        if(this.state.textCatID !== this.props.text.id) {
+            this.getText(true);
+        }
+        else if(this.state.textContent[this.props.tabIndex-1] == null) {
+            this.getText(false);
+        }
     }
 
     getImage(flushState) {
@@ -70,18 +81,14 @@ class Content extends Component {
                     tmp = [null, null, null, null];
                 }
                 tmp[this.props.tabIndex - 1] = response.data;
-                console.log(response.data);
+                //console.log(response.data);
                 this.setState({
                     imgCatID: this.props.img.id,
                     imageContent: tmp
                 });
             })
             .catch(error => {
-                // handle error
                 console.log(error);
-            })
-            .then(function () {
-                // always executed
             });
     }
 
@@ -94,6 +101,7 @@ class Content extends Component {
             this.getMedia(false);
             console.log("GET request");
         }
+
     }
 
     render() {
@@ -106,6 +114,7 @@ class Content extends Component {
                 <div className="textContainer">
                     <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
                 </div>
+                <audio src={this.getAudioPath()} autoPlay="true" loop="true"/>
             </div>
         );
     }
