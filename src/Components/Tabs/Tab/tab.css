@@ -16,3 +16,12 @@
     border: solid #ccc;
     border-width: 1px 1px 0 1px;
 }
+
+
+.tab-list-item:hover {
+    background: #222 linear-gradient(to top, rgb(210, 210, 210), rgb(240, 240, 240));
+}
+
+@media screen and (max-width: 600px) {
+    .tab-list-item {padding: 1rem 0.75rem; font-size: 14px;}
+}

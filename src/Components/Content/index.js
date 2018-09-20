@@ -61,6 +61,11 @@ class Content extends Component {
             });
     }
 
+    getAudioPath() {
+        var path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
+        return path;
+    }
+
     getImage(flushState) {
         let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
         axios.get(path)
@@ -106,6 +111,7 @@ class Content extends Component {
                 <div className="textContainer">
                     <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
                 </div>
+                <audio src={this.getAudioPath()} autoPlay="true" loop="true"></audio>
             </div>
         );
     }

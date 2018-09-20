@@ -19,10 +19,6 @@
     max-height: 420px;
 }
 
-pre {
-    white-space: pre-wrap;
-    text-align: center;
-}
 
 /* Når størrelsen er små tablets/store telefoner synker tekst under bilde*/
 @media screen and (max-width: 767px) {
@@ -35,4 +31,11 @@ pre {
         width: 250px;
         height: 250px;
     }
+}
+
+pre {
+    font-family: Garamond, Verdana, serif;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 20px;
 }
