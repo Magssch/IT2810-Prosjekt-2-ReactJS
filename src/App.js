@@ -153,28 +153,28 @@ class App extends Component {
 
     render() {
     return (
-        <div className="App">
-            <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
-            <div className="page" onClick={this.sidenavClose}>
-            <header className="header">
-                <h1 className="title">Personified art</h1>
-            </header>
-                <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
-                <div className="tabs-container">
-                    <Tabs onClick={this.updateTabs}>
-                        <Tab label="Cymatics - 1"/>
-                        <Tab label="Divination - 2"/>
-                        <Tab label="Spirituality - 3"/>
-                        <Tab label="Remembrance - 4"/>
-                    </Tabs>
-                </div>
-                <div className="content">
-                    <Content 
-                            tabIndex={this.state.tab} 
-                            text={this.getText()} 
-                            img={this.getImg()} 
-                            aud={this.getAud()}
-                    />
+      <div className="App">
+          <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
+          <div className="page" onClick={this.sidenavClose}>
+          <header className="header">
+              <h1 className="title">Ellevil interaktiv utstilling</h1>
+          </header>
+              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
+            <div className="tabs-container">
+                  <Tabs onClick={this.updateTabs}>
+                      <Tab label="Verk 1" />
+                      <Tab label="Verk 2" />
+                      <Tab label="Verk 3" />
+                      <Tab label="Verk 4" />
+                  </Tabs>
+            </div>
+            <div className="content">
+                <Content 
+                        tabIndex={this.state.tab} 
+                        text={this.getText()} 
+                        img={this.getImg()} 
+                         aud={this.getAud()}
+                />
                 </div>
             </div>
         </div>

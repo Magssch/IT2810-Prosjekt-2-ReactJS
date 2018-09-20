@@ -107,10 +107,14 @@ class Content extends Component {
     render() {
         this.update();
         return (
-            <div>
+            <div className="contentContainer">
+                <div className="picContainer">
+                    <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
+                </div>
+                <div className="textContainer">
+                    <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
+                </div>
                 <audio src={this.getAudioPath()} autoPlay="true" loop="true"/>
-                <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
-                <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
             </div>
         );
     }
