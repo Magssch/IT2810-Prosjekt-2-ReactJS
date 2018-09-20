@@ -19,10 +19,6 @@
     max-height: 420px;
 }
 
-pre {
-    white-space: pre-wrap;
-    text-align: center;
-}
 
 /* Når størrelsen er små tablets/store telefoner synker tekst under bilde*/
 @media screen and (max-width: 767px) {

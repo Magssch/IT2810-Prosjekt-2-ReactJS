@@ -169,12 +169,11 @@ class App extends Component {
                   </Tabs>
             </div>
             <div className="content">
-                <Content 
-                        tabIndex={this.state.tab} 
-                        text={this.getText()} 
-                        img={this.getImg()} 
-                         aud={this.getAud()}
-                />
+                <Content
+                        tabIndex={this.state.tab}
+                        text={this.getText()}
+                        img={this.getImg()}
+                        aud={this.getAud()}/>
                 </div>
             </div>
         </div>

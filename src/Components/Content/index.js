@@ -72,6 +72,7 @@ class Content extends Component {
         }
     }
 
+
     getImage(flushState) {
         let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
         axios.get(path)
