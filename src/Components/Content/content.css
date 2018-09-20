@@ -1,4 +1,38 @@
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.picContainer {
+    flex: 30%;
+}
+
+.textContainer {
+    flex: 70%;
+}
+
 .image {
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 420px;
+    max-height: 420px;
+}
+
+pre {
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+/* Når størrelsen er små tablets/store telefoner synker tekst under bilde*/
+@media screen and (max-width: 767px) {
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+    }
 }

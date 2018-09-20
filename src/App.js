@@ -163,21 +163,19 @@ class App extends Component {
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
           <div className="page" onClick={this.sidenavClose}>
           <header className="header">
-              <h1 className="title">Lorem Ipsum</h1>
+              <h1 className="title">Ellevil interaktiv utstilling</h1>
           </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
             <div className="tabs-container">
                   <Tabs onClick={this.updateTabs}>
-                      <Tab label="Artwork 1" />
-                      <Tab label="Artwork 2" />
-                      <Tab label="Artwork 3" />
-                      <Tab label="Artwork 4" />
+                      <Tab label="Verk 1" />
+                      <Tab label="Verk 2" />
+                      <Tab label="Verk 3" />
+                      <Tab label="Verk 4" />
                   </Tabs>
             </div>
             <div className="content">
                 <Content tabIndex={this.state.tab} text={this.getText()} img={this.getImg()} aud={this.getAud()}/>
-                <br/>
-                <button onClick={this.updateTab}>Bytt tab</button>
             </div>
         </div>
       </div>

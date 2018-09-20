@@ -1,3 +1,10 @@
-.tabs {
-    border: black 1px;
+.tab-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
+
+ol {
+    border-bottom: 1px solid #ccc;
+}
+
