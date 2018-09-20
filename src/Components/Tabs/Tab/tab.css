@@ -7,12 +7,18 @@
     display: inline-block;
     list-style: none;
     margin-bottom: -1px;
-    padding: 0.5rem 0.75rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
+    font-family: Bebas Neue, Verdana, serif;
+    transition: padding 0.2s;
 }
 
 .tab-list-active {
     background-color: white;
     border: solid #ccc;
     border-width: 1px 1px 0 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .tab-list-item {padding: 1rem 0.75rem; font-size: 14px;}
 }
