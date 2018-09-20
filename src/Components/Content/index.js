@@ -72,11 +72,9 @@ class Content extends Component {
     update = () => {
         if(this.state.textCatID !== this.props.text.id) {
             this.getText(true);
-            console.log("textlush stat  e");
         }
         else if(this.state.textContent[this.props.tabIndex-1] == null) {
             this.getText(false);
-            console.log("GET text request");
         }
     }
             getImage(flushState) {
@@ -88,7 +86,6 @@ class Content extends Component {
                     tmp = [null, null, null, null];
                 }
                 tmp[this.props.tabIndex - 1] = response.data;
-                console.log(response.data);
                 this.setState({
                     imgCatID: this.props.img.id,
                     imageContent: tmp
@@ -96,7 +93,6 @@ class Content extends Component {
             })
             .catch(error => {
                 // handle error
-                console.log(error);
             })
             .then(function () {
                 // always executed
@@ -106,11 +102,9 @@ class Content extends Component {
     update = () => {
         if(this.state.textCatID !== this.props.text.id || this.state.imgCatID !== this.props.img.id) {
             this.getMedia(true);
-            console.log("Flush state");
         }
         else if(this.state.textContent[this.props.tabIndex-1] == null || this.state.imageContent[this.props.tabIndex-1] == null) {
             this.getMedia(false);
-            console.log("GET request");
         }
 
     }

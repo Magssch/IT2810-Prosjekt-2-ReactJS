@@ -20,7 +20,6 @@ class App extends Component {
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-        
 
         categories: [
             {
@@ -98,9 +97,6 @@ class App extends Component {
         ]
     }
 
-
-
-
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
             this.setState({
@@ -160,26 +156,6 @@ class App extends Component {
         return this.getCategories()[1][0];
     }
     
-
-    /*
-    getImage() {
-        let categoryState = this.getCategories();
-        let path = '/media/images/'+categoryState[0][0].name+'/'+this.state.tab+'.mp3';
-        axios.get(path)
-            .then(function (response) {
-                // handle success
-                console.log(response);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed 
-            });
-    }*/
-
-
     render() {
     return (
         <div className="App">
@@ -191,10 +167,10 @@ class App extends Component {
                 <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
                 <div className="tabs-container">
                     <Tabs onClick={this.updateTabs}>
-                        <Tab label="First artwork1">  Lorem Ipsum</Tab>
-                        <Tab label="Second artwork2">dolor sit</Tab>
-                        <Tab label="Third artwork3">amet, consectuvet</Tab>
-                        <Tab label="Fourth artwork4">amet, consectuvet</Tab>
+                        <Tab label="First artwork1"/>
+                        <Tab label="Second artwork2"/>
+                        <Tab label="Third artwork3"/>
+                        <Tab label="Fourth artwork4"/>
                     </Tabs>
                 </div>
                 <div className="content">
@@ -204,7 +180,6 @@ class App extends Component {
                             img={this.getImg()} 
                             aud={this.getAud()}
                     />
-                    <button onClick={this.updateTab}>Bytt tab</button>
                 </div>
             </div>
         </div>
