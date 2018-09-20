@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './Components/Menu';
 import Tabs from './Components/Tabs';
-import Tab from './Components/Tab';
+import Tab from './Components/Tabs/Tab';
 import Sidenav from './Components/Sidenav';
 import axios from 'axios';
 import Content from './Components/Content';
@@ -17,7 +17,6 @@ class App extends Component {
         this.updateTab = this.updateTab.bind(this);
     }
     state = {
-        diceVal: 1,
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
@@ -99,15 +98,8 @@ class App extends Component {
         ]
     }
 
-    componentDidMount() {
 
-    }
 
-    onRoll = () => {
-        this.setState({
-            diceVal: Math.floor(Math.random()*6)+1
-        })
-    };
 
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
@@ -148,6 +140,10 @@ class App extends Component {
         this.setState({tab: tmp+1});
     }
 
+    updateTabs = (tab) => {
+        let activeTab = parseInt(tab.slice(-1));
+        if (this.state.tab !== activeTab) this.setState({tab: activeTab});
+}
 
     getCategories() {
         return [this.state.categories[0].options.filter(option => option.checked),
@@ -179,7 +175,7 @@ class App extends Component {
                 console.log(error);
             })
             .then(function () {
-                // always executed
+                // always executed 
             });
     }*/
 
@@ -194,11 +190,11 @@ class App extends Component {
             </header>
                 <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
                 <div className="tabs-container">
-                    <Tabs>
-                        <Tab label="First artwork">  Lorem Ipsum</Tab>
-                        <Tab label="Second artwork">dolor sit</Tab>
-                        <Tab label="Third artwork">amet, consectuvet</Tab>
-                        <Tab label="Fourth artwork">amet, consectuvet</Tab>
+                    <Tabs onClick={this.updateTabs}>
+                        <Tab label="First artwork1">  Lorem Ipsum</Tab>
+                        <Tab label="Second artwork2">dolor sit</Tab>
+                        <Tab label="Third artwork3">amet, consectuvet</Tab>
+                        <Tab label="Fourth artwork4">amet, consectuvet</Tab>
                     </Tabs>
                 </div>
                 <div className="content">
