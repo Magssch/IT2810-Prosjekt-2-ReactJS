@@ -4,7 +4,6 @@ import Menu from './Components/Menu';
 import Tabs from './Components/Tabs';
 import Tab from './Components/Tabs/Tab';
 import Sidenav from './Components/Sidenav';
-import axios from 'axios';
 import Content from './Components/Content';
 
 
@@ -14,29 +13,27 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
-        this.updateTab = this.updateTab.bind(this);
     }
     state = {
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
-        
 
         categories: [
             {
                 id: 1,
-                name: "Bilder",
+                name: "Images",
                 options: [
                     {
                         id: 1,
                         name: "chairs",
-                        text: "Stoler",
+                        text: "Chairs",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lamps",
-                        text: "Lamper",
+                        text: "Lamps",
                         checked: false
                     },
                     {
@@ -49,42 +46,42 @@ class App extends Component {
             },
             {
                 id: 2,
-                name: "Lyd",
+                name: "Audio",
                 options: [
                     {
                         id: 1,
                         name: "folk",
-                        text: "Folkeinstrumenter",
+                        text: "Folk Instruments",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "string",
-                        text: "Strenginstrumenter",
+                        text: "String Instruments",
                         checked: false
                     },
                     {
                         id: 3,
                         name: "blow",
-                        text: "Blåseinstrumenter",
+                        text: "Wind Instruments",
                         checked: false
                     },
                 ]
             },
             {
                 id: 3,
-                name: "Tekst",
+                name: "Text",
                 options: [
                     {
                         id: 1,
                         name: "cites",
-                        text: "Sitater",
+                        text: "Quotes",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lyrics",
-                        text: "Sangtekster",
+                        text: "Lyrics",
                         checked: false
                     },
                     {
@@ -96,7 +93,7 @@ class App extends Component {
                 ]
             },
         ]
-    }
+    };
 
 
 
@@ -134,12 +131,6 @@ class App extends Component {
         });
     }
 
-    updateTab() {
-        let tmp = this.state.tab;
-        if(tmp>3) tmp = 0;
-        this.setState({tab: tmp+1});
-    }
-
     updateTabs = (tab) => {
         let activeTab = parseInt(tab.slice(-1));
         if (this.state.tab !== activeTab) this.setState({tab: activeTab});
@@ -159,26 +150,6 @@ class App extends Component {
     getAud() {
         return this.getCategories()[1][0];
     }
-    
-
-    /*
-    getImage() {
-        let categoryState = this.getCategories();
-        let path = '/media/images/'+categoryState[0][0].name+'/'+this.state.tab+'.mp3';
-        axios.get(path)
-            .then(function (response) {
-                // handle success
-                console.log(response);
-            })
-            .catch(function (error) {
-                // handle error
-                console.log(error);
-            })
-            .then(function () {
-                // always executed 
-            });
-    }*/
-
 
     render() {
     return (
@@ -191,10 +162,10 @@ class App extends Component {
                 <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
                 <div className="tabs-container">
                     <Tabs onClick={this.updateTabs}>
-                        <Tab label="First artwork1">  Lorem Ipsum</Tab>
-                        <Tab label="Second artwork2">dolor sit</Tab>
-                        <Tab label="Third artwork3">amet, consectuvet</Tab>
-                        <Tab label="Fourth artwork4">amet, consectuvet</Tab>
+                        <Tab label="Cymatics - 1"/>
+                        <Tab label="Divination - 2"/>
+                        <Tab label="Spirituality - 3"/>
+                        <Tab label="Remembrance - 4"/>
                     </Tabs>
                 </div>
                 <div className="content">
@@ -204,7 +175,6 @@ class App extends Component {
                             img={this.getImg()} 
                             aud={this.getAud()}
                     />
-                    <button onClick={this.updateTab}>Bytt tab</button>
                 </div>
             </div>
         </div>

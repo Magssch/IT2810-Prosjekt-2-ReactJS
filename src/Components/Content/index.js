@@ -39,8 +39,6 @@ class Content extends Component {
         this.getText(flushState);
     }
 
-
-
     getText(flushState) {
         let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
         axios.get(path)
@@ -56,30 +54,25 @@ class Content extends Component {
                 });
             })
             .catch(error => {
-                // handle error
                 console.log(error);
-            })
-            .then(function () {
-                // always executed
             });
     }
 
     getAudioPath() {
-        var path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
+        let path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
         return path;
     }
 
     update = () => {
         if(this.state.textCatID !== this.props.text.id) {
             this.getText(true);
-            console.log("textlush stat  e");
         }
         else if(this.state.textContent[this.props.tabIndex-1] == null) {
             this.getText(false);
-            console.log("GET text request");
         }
     }
-            getImage(flushState) {
+
+    getImage(flushState) {
         let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
         axios.get(path)
             .then(response => {
@@ -88,18 +81,14 @@ class Content extends Component {
                     tmp = [null, null, null, null];
                 }
                 tmp[this.props.tabIndex - 1] = response.data;
-                console.log(response.data);
+                //console.log(response.data);
                 this.setState({
                     imgCatID: this.props.img.id,
                     imageContent: tmp
                 });
             })
             .catch(error => {
-                // handle error
                 console.log(error);
-            })
-            .then(function () {
-                // always executed
             });
     }
 
@@ -119,7 +108,7 @@ class Content extends Component {
         this.update();
         return (
             <div>
-                <audio src={this.getAudioPath()} autoPlay="true" loop="true"></audio>
+                <audio src={this.getAudioPath()} autoPlay="true" loop="true"/>
                 <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
                 <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
             </div>
