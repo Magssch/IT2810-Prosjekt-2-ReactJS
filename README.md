@@ -23,7 +23,22 @@
 - fkdjks
 #
 ## Samarbeid, bruk av Git, koding, leveranse
-
+ - Alle på gruppen var kompiser før vi satte i gang(Vi er fortsatt kompiser), så samarbeidet i gruppen har vært veldig bra fra start til slutt. Vi har forventet oppmøte og resultater av alle, og det har vært sunt for vår arbeidsprosess. Vi har spurt hverandre om ting vi er usikre på, og har både lært av hverandre og hjulpet hverandre med å lære helt nye ting.
+ - Ved prosjektstart var vi gjennom en prosess hvor vi prøvde å skissere nettsidens layout og oppsett, samt hvilke komponenter vi skulle bruke. Fra dette laget vi issues, men vi har også laget mange nye issues underveis etterhvert som problemstillinger og nytt arbeid har oppstått. Fordeling av issues har gått bra, og vi har jobbet med issues vi interesserer oss for gjennom hele prosjektet. '
+ - To av tre gruppemedlemmer hadde kjennskap til git fra tidligere emner, men det har ikke vært noe problem å lære sistemann bruk av git. 
+## Testing
+- 
 Kilder:
 - https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
--
+- https://alligator.io/react/tabs-component/
+SVG:
+
+https://lovesvg.com/free-svg-cut-files/
+
+Tekst:
+
+https://www.goodreads.com/quotes/
+
+Lyd:
+
+https://freesound.org
