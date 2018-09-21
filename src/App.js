@@ -95,9 +95,6 @@ class App extends Component {
         ]
     };
 
-
-
-
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
             this.setState({
@@ -131,8 +128,10 @@ class App extends Component {
         });
     }
 
+    /* Kalles hver gang brukeren velger en ny tab og oppdaterer
+       hvilken tab som er aktiv. */
     updateTabs = (tab) => {
-        let activeTab = parseInt(tab.slice(-1));
+        let activeTab = parseInt(tab.slice(-1), 10);
         if (this.state.tab !== activeTab) this.setState({tab: activeTab});
 }
 
@@ -156,26 +155,27 @@ class App extends Component {
       <div className="App">
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
           <div className="page" onClick={this.sidenavClose}>
-          <header className="header">
-              <h1 className="title">Ellevil interaktiv utstilling</h1>
-          </header>
+              <header className="header">
+                <h1 className="title">Ellevil interaktiv utstilling</h1>
+              </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
-            <div className="tabs-container">
+              <div className="tabs-container">
                   <Tabs onClick={this.updateTabs}>
                       <Tab label="Verk 1" />
                       <Tab label="Verk 2" />
                       <Tab label="Verk 3" />
                       <Tab label="Verk 4" />
                   </Tabs>
-            </div>
-            <div className="content">
+              </div>
+              <div className="content">
                 <Content
                         tabIndex={this.state.tab}
                         text={this.getText()}
                         img={this.getImg()}
-                        aud={this.getAud()}/>
-                </div>
-            </div>
+                        aud={this.getAud()}
+                />
+              </div>
+          </div>
         </div>
     );
   }
