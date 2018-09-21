@@ -22,7 +22,7 @@
 .textContainer {
     flex: 70%;
     height: auto;
-    border-radius: 40px;
+    border-radius: 30px;
     margin: 10px;
     background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
     display: flex;
@@ -33,7 +33,7 @@
     max-width: 420px;
     max-height: 420px;
     background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
-    border-radius: 40px;
+    border-radius: 30px;
     padding: 15px;
 }
 
