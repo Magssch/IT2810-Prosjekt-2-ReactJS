@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Tab from './Tab';
 import './tabs.css'
 
+/* Tabs komponenten viser en liste av alle tabsene og
+   holder styr på hvilken tab som er aktiv (trykket ned) */
 class Tabs extends Component {
 
     constructor(props) {
@@ -18,8 +20,7 @@ class Tabs extends Component {
     }
 
     render() {
-        const {
-            onClickTabItem,
+        const { onClickTabItem,
             props: {
                 children,
             },
