@@ -13,10 +13,16 @@
     transition: 0.2s;
 }
 
+.audio {
+    margin-top: 20px;
+    max-width: 420px;
+    width: 420px;
+}
+
 .textContainer {
     flex: 70%;
     height: auto;
-    border-radius: 20px;
+    border-radius: 40px;
     margin: 10px;
     background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
     display: flex;
@@ -27,7 +33,7 @@
     max-width: 420px;
     max-height: 420px;
     background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 15px;
 }
 
@@ -42,6 +48,10 @@
     .image {
         width: 250px;
         height: 250px;
+    }
+
+    .audio {
+        width: 283px;
     }
 }
 

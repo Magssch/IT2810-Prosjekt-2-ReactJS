@@ -98,6 +98,7 @@ class Content extends Component {
             <div className="contentContainer">
                 <div className="picContainer">
                     <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
+                    <audio className="audio" controls src={this.getAudioPath()} autoPlay="true" loop="true"/>
                 </div>
                 <div className="textContainer">
                     <pre className="TextContent">
@@ -106,8 +107,7 @@ class Content extends Component {
                         </blockquote>
                     </pre>
                 </div>
-                <audio src={this.getAudioPath()} autoPlay="true" loop="true"/>
-            </div>
+               </div>
         );
     }
 }
