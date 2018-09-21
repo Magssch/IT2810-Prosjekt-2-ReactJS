@@ -3,6 +3,7 @@ import './menu.css';
 
 class Menu extends Component {
 
+    // Hamburgermeny-komponent, åpner sidepanelet.
     render() {
         return (
             <div className={`menu ${this.props.value}`} onClick={this.props.onClick}>

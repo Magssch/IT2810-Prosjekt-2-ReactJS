@@ -10,9 +10,8 @@ class Content extends Component {
         super(props);
         this.getText = this.getText.bind(this);
         this.getMedia = this.getMedia.bind(this);
-        //this.flushState = this.flushState.bind(this);
     }
-
+    // Lagrer media-innholdet i state
     state = {
         textCatID: 1,
         textContent: [null,
@@ -21,28 +20,26 @@ class Content extends Component {
                        null
         ],
         audCatID: 1,
-        audioContent: [null,
-            null,
-            null,
-            null,
-        ],
         imgCatID: 1,
         imageContent: [null,
             null,
             null,
             null
         ],
-    }
+    };
 
     getMedia(flushState) {
         this.getImage();
         this.getText(flushState);
     }
 
+    // Henter ut tekst via AJAX
     getText(flushState) {
         let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
         axios.get(path)
             .then(response => {
+
+                // Lagrer state midlertidig for å unngå å sette state samtidig som man henter den ut
                 let temporaryState = this.state.textContent;
                 if(flushState) {
                     temporaryState = [null, null, null, null];
@@ -62,10 +59,13 @@ class Content extends Component {
         return '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
     }
 
+    // Henter ut bilder via AJAX
     getImage(flushState) {
         let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
         axios.get(path)
             .then(response => {
+
+                // Lagrer state midlertidig for å unngå å sette state samtidig som man henter den ut
                 let tmp = this.state.imageContent;
                 if(flushState) {
                     tmp = [null, null, null, null];
@@ -81,6 +81,8 @@ class Content extends Component {
             });
     }
 
+    // Hvis kategorier er endret skal state til det mediet nullstilles i tillegg til å hente ut via ajax,
+    // hvis ikke skal man bare hente ajax.
     update = () => {
         if(this.state.textCatID !== this.props.text.id || this.state.imgCatID !== this.props.img.id) {
             this.getMedia(true);

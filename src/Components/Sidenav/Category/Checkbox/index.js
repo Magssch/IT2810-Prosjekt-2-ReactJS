@@ -3,6 +3,7 @@ import './checkbox.css';
 
 class Checkbox extends Component {
 
+    // Hvis knappen endres, send melding om dette til parent.
     handleChange = () => {
         this.props.handleChange({
             id: this.props.id,
@@ -10,6 +11,7 @@ class Checkbox extends Component {
         });
     }
 
+    // Teknisk sett feil navn på klasse, burde egentlig het radio-button.
     render() {
         return (
             <label className="container">{this.props.text}

@@ -15,10 +15,12 @@ class App extends Component {
         this.categoryChange = this.categoryChange.bind(this);
     }
     state = {
+        // Holder orden på state til sidepanel og hamburgermeny.
         sidenavExpanded: "",
         menuClicked: "",
         tab: 1,
 
+        // Holder orden på de forskjellige kategoriene og state til disse.
         categories: [
             {
                 id: 1,
@@ -95,6 +97,7 @@ class App extends Component {
         ]
     };
 
+    // Åpner sidepanel hvis det er lukket og omvendt hvis ikke. Kjøres kun når Menu-komponenten trykkes på.
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
             this.setState({
@@ -109,6 +112,7 @@ class App extends Component {
         }
     };
 
+    // Denne kjøres hvis sidepanelet er åpnet og brukeren trykker på et vilkårlig sted på siden. Lukker sidepanelet.
     sidenavClose = () => {
         if(!(this.state.sidenavExpanded === "")) {
             this.setState({
@@ -118,6 +122,7 @@ class App extends Component {
         }
     };
 
+    // Kjøres når App.js mottar beskjed om at en checkbox er trykket på, oppdaterer til riktig state.
     categoryChange(category) {
         let temp = this.state.categories;
         temp[category.id - 1].options.forEach(o => o.checked = false);
@@ -133,8 +138,9 @@ class App extends Component {
     updateTabs = (tab) => {
         let activeTab = parseInt(tab.slice(-1), 10);
         if (this.state.tab !== activeTab) this.setState({tab: activeTab});
-}
+    }
 
+    // Disse funksjonene henter ut state til kategori-valgene som er valgt og sender til content.
     getCategories() {
         return [this.state.categories[0].options.filter(option => option.checked),
             this.state.categories[1].options.filter(option => option.checked),

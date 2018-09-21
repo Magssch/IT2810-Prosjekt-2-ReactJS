@@ -9,6 +9,7 @@ class Sidenav extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+    // Send videre melding om checkbox-endring til App.js
     handleChange(category) { this.props.handleChange(category); }
 
     render() {
