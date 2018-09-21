@@ -1,24 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import './checkbox.css';
 
 class Checkbox extends Component {
 
-    state = {
-        checked: this.props.checked,
-    }
-
+    // Hvis knappen endres, send melding om dette til parent.
     handleChange = () => {
-        let temp = this.state.checked;
-        this.setState({
-            checked: !temp,
-        });
-        console.log(!temp)
         this.props.handleChange({
             id: this.props.id,
-            checked: !temp
+            checked: !this.props.checked
         });
     }
 
+    // Teknisk sett feil navn på klasse, burde egentlig het radio-button.
     render() {
         return (
             <label className="container">{this.props.text}

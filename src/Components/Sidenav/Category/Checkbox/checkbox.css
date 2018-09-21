@@ -1,7 +1,7 @@
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+    padding-left: 30px;
     cursor: pointer;
     font-size: 19px;
     user-select: none;
@@ -52,4 +52,23 @@
     height: 7px;
     border-radius: 50%;
     background: white;
+}
+
+@media screen and (max-height: 500px) {
+    .container {
+        font-size:13px;
+        margin: 8px 25px;
+    }
+
+    .checkmark {
+        height: 15px;
+        width: 15px;
+    }
+
+    .container .checkmark:after {
+        top: 5px;
+        left: 5px;
+        width: 5px;
+        height: 5px;
+    }
 }

@@ -4,11 +4,13 @@ import Checkbox from './Checkbox';
 
 class Category extends Component {
 
+    // Parent-klasse til Checkbox, for hver kategori.
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
     }
 
+    // send videre melding om endring fra checkbox, men legg i tillegg ved kategori-ID.
     handleChange(checkbox) {
         this.props.handleChange({
             id: this.props.id,

@@ -4,10 +4,6 @@
     src: url("BebasNeue.otf");
 }
 
-.App {
-
-}
-
 .page {
     margin:0;
     padding:0;
@@ -32,8 +28,22 @@
     letter-spacing: 6px;
     padding: 5px 30px;
     text-shadow: 2px 2px 2px #222222;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.tabs-container {
+    padding: 80px 20px 10px;
+    user-select: none;
 }
 
 .content {
-    padding: 100px 20px 20px;
+    padding: 0 30px 20px;
+}
+
+@media screen and (max-width: 550px) {
+    .title {
+        padding: 12px 20px;
+        font-size: 1.4em;
+    }
 }

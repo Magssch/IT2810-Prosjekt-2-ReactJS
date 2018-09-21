@@ -1,0 +1,86 @@
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    transition: 0.2s;
+}
+
+.picContainer {
+    flex: 30%;
+    margin: 10px;
+    transition: 0.2s;
+}
+
+.audio {
+    margin-top: 20px;
+    max-width: 420px;
+    width: 420px;
+}
+
+.textContainer {
+    flex: 70%;
+    height: auto;
+    border-radius: 30px;
+    margin: 10px;
+    background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
+    display: flex;
+    transition: 0.2s;
+}
+
+.image {
+    max-width: 420px;
+    max-height: 420px;
+    background: #eee linear-gradient(to bottom right, #f2f2f2, #dddddd);
+    border-radius: 30px;
+    padding: 15px;
+}
+
+
+/* Når størrelsen er små tablets/store telefoner synker tekst under bilde*/
+@media screen and (max-width: 767px) {
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .audio {
+        width: 283px;
+    }
+}
+
+pre {
+    font-family: Garamond, Georgia, Verdana, serif;
+    white-space: pre-line;
+    text-align: center;
+    font-size: 20px;
+    padding: 40px;
+    margin: auto;
+}
+
+blockquote {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+blockquote:before {
+    content: open-quote;
+}
+blockquote:after {
+    content: close-quote;
+}
+
+blockquote:before, blockquote:after {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 4em;
+    top: .2em;
+    padding: 0 10px;
+    position: relative;
+}

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dice from './Components/Dice';
 import Menu from './Components/Menu';
+import Tabs from './Components/Tabs';
+import Tab from './Components/Tabs/Tab';
 import Sidenav from './Components/Sidenav';
+import Content from './Components/Content';
+
 
 
 class App extends Component {
@@ -11,27 +14,28 @@ class App extends Component {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
     }
-
     state = {
-        diceVal: 1,
+        // Holder orden på state til sidepanel og hamburgermeny.
         sidenavExpanded: "",
         menuClicked: "",
+        tab: 1,
 
+        // Holder orden på de forskjellige kategoriene og state til disse.
         categories: [
             {
                 id: 1,
-                name: "Bilder",
+                name: "Images",
                 options: [
                     {
                         id: 1,
                         name: "chairs",
-                        text: "Stoler",
+                        text: "Chairs",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lamps",
-                        text: "Lamper",
+                        text: "Lamps",
                         checked: false
                     },
                     {
@@ -44,42 +48,42 @@ class App extends Component {
             },
             {
                 id: 2,
-                name: "Lyd",
+                name: "Audio",
                 options: [
                     {
                         id: 1,
                         name: "folk",
-                        text: "Folkeinstrumenter",
+                        text: "Folk Instruments",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "string",
-                        text: "Strenginstrumenter",
+                        text: "String Instruments",
                         checked: false
                     },
                     {
                         id: 3,
                         name: "blow",
-                        text: "Blåseinstrumenter",
+                        text: "Wind Instruments",
                         checked: false
                     },
                 ]
             },
             {
                 id: 3,
-                name: "Tekst",
+                name: "Text",
                 options: [
                     {
                         id: 1,
                         name: "cites",
-                        text: "Sitater",
+                        text: "Quotes",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lyrics",
-                        text: "Sangtekster",
+                        text: "Lyrics",
                         checked: false
                     },
                     {
@@ -91,14 +95,9 @@ class App extends Component {
                 ]
             },
         ]
-    }
-
-    onRoll = () => {
-        this.setState({
-            diceVal: Math.floor(Math.random()*6)+1
-        })
     };
 
+    // Åpner sidepanel hvis det er lukket og omvendt hvis ikke. Kjøres kun når Menu-komponenten trykkes på.
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
             this.setState({
@@ -113,6 +112,7 @@ class App extends Component {
         }
     };
 
+    // Denne kjøres hvis sidepanelet er åpnet og brukeren trykker på et vilkårlig sted på siden. Lukker sidepanelet.
     sidenavClose = () => {
         if(!(this.state.sidenavExpanded === "")) {
             this.setState({
@@ -122,6 +122,7 @@ class App extends Component {
         }
     };
 
+    // Kjøres når App.js mottar beskjed om at en checkbox er trykket på, oppdaterer til riktig state.
     categoryChange(category) {
         let temp = this.state.categories;
         temp[category.id - 1].options.forEach(o => o.checked = false);
@@ -130,58 +131,59 @@ class App extends Component {
         this.setState({
             category: temp,
         });
-
-        console.log(this.state.categories);
-        console.log(temp);
     }
 
+    /* Kalles hver gang brukeren velger en ny tab og oppdaterer
+       hvilken tab som er aktiv. */
+    updateTabs = (tab) => {
+        let activeTab = parseInt(tab.slice(-1), 10);
+        if (this.state.tab !== activeTab) this.setState({tab: activeTab});
+    }
 
-  render() {
+    // Disse funksjonene henter ut state til kategori-valgene som er valgt og sender til content.
+    getCategories() {
+        return [this.state.categories[0].options.filter(option => option.checked),
+            this.state.categories[1].options.filter(option => option.checked),
+            this.state.categories[2].options.filter(option => option.checked)];
+    }
+    getText() {
+        return this.getCategories()[2][0];
+    }
+    getImg() {
+        return this.getCategories()[0][0];
+    }
+    getAud() {
+        return this.getCategories()[1][0];
+    }
+
+    render() {
     return (
       <div className="App">
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
           <div className="page" onClick={this.sidenavClose}>
-          <header className="header">
-          <h1 className="title">Lorem Ipsum</h1>
-            </header>
-              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked}/>
-            <div className="content">
-                <p>Lorem ipsum dolor sit amet</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi dolor, vulputate nec fermentum quis, laoreet vitae ipsum. Ut lobortis neque congue auctor aliquam. Ut quis quam et magna tincidunt porttitor. Vivamus vitae nisi molestie, congue diam in, vehicula felis. In suscipit tristique mauris eget vulputate. Proin rutrum neque non lacus dignissim, at pulvinar diam molestie. Sed vehicula sed lectus sed rhoncus. Donec posuere vestibulum purus non condimentum. Aenean et fermentum ligula. Suspendisse consequat volutpat velit, vitae mattis nisl tincidunt nec. Nunc pretium venenatis purus at faucibus. Morbi ac sapien enim. Curabitur rutrum metus ut pretium venenatis. Vestibulum at ullamcorper elit, consectetur mattis nibh.
-
-                    Donec viverra diam a sodales venenatis. Suspendisse potenti. Fusce condimentum id felis nec sollicitudin. Vivamus efficitur nulla blandit felis sodales, sed laoreet libero iaculis. Aliquam gravida interdum mauris. Sed feugiat hendrerit eleifend. Praesent et libero ac justo efficitur venenatis vitae tempor sapien. Duis risus felis, varius nec fringilla eu, hendrerit at libero.
-
-                    Cras vitae sapien felis. In malesuada efficitur arcu vitae pulvinar. Nam vehicula urna nibh, vitae posuere libero vulputate nec. Aliquam erat volutpat. Proin et lectus ipsum. Vivamus imperdiet luctus urna, ac vulputate sem efficitur ut. Vestibulum ac turpis lectus. Etiam hendrerit ornare lacus, sit amet tincidunt magna auctor sed. In mi ipsum, tincidunt vel rutrum quis, lacinia eu nulla. Praesent at erat in diam gravida posuere. Quisque dictum sollicitudin hendrerit. Phasellus fringilla iaculis leo, non imperdiet erat suscipit eget. Donec ac risus suscipit, ultricies metus vel, pulvinar diam. Nunc tincidunt nibh ut metus maximus ornare.
-
-                    Sed elementum ipsum ac neque accumsan faucibus. Mauris a dapibus erat. Sed sed est vitae ligula aliquam consectetur. Donec cursus, augue at sollicitudin commodo, velit lacus aliquam mauris, vitae bibendum lorem magna id nulla. Ut tempus velit eget libero imperdiet, ac dictum dui bibendum. Nunc pretium in libero eu varius. Donec ut metus vitae risus blandit laoreet eget eget nisi. Cras quam justo, vestibulum eget aliquet feugiat, faucibus vitae lorem.
-
-                    Sed et euismod ex, sit amet euismod turpis. Cras malesuada tristique nisl, eget cursus elit. Vestibulum dictum velit at mauris sollicitudin, at pretium libero fringilla. Aenean et lacinia ex. Ut laoreet tortor id neque convallis consectetur. Etiam venenatis, neque ut condimentum suscipit, urna purus pharetra augue, ultrices scelerisque ex orci non eros. Phasellus sit amet odio quis ligula consectetur tristique eget quis nibh. Pellentesque ut diam in quam aliquet elementum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi dolor, vulputate nec fermentum quis, laoreet vitae ipsum. Ut lobortis neque congue auctor aliquam. Ut quis quam et magna tincidunt porttitor. Vivamus vitae nisi molestie, congue diam in, vehicula felis. In suscipit tristique mauris eget vulputate. Proin rutrum neque non lacus dignissim, at pulvinar diam molestie. Sed vehicula sed lectus sed rhoncus. Donec posuere vestibulum purus non condimentum. Aenean et fermentum ligula. Suspendisse consequat volutpat velit, vitae mattis nisl tincidunt nec. Nunc pretium venenatis purus at faucibus. Morbi ac sapien enim. Curabitur rutrum metus ut pretium venenatis. Vestibulum at ullamcorper elit, consectetur mattis nibh.
-
-                    Donec viverra diam a sodales venenatis. Suspendisse potenti. Fusce condimentum id felis nec sollicitudin. Vivamus efficitur nulla blandit felis sodales, sed laoreet libero iaculis. Aliquam gravida interdum mauris. Sed feugiat hendrerit eleifend. Praesent et libero ac justo efficitur venenatis vitae tempor sapien. Duis risus felis, varius nec fringilla eu, hendrerit at libero.
-
-                    Cras vitae sapien felis. In malesuada efficitur arcu vitae pulvinar. Nam vehicula urna nibh, vitae posuere libero vulputate nec. Aliquam erat volutpat. Proin et lectus ipsum. Vivamus imperdiet luctus urna, ac vulputate sem efficitur ut. Vestibulum ac turpis lectus. Etiam hendrerit ornare lacus, sit amet tincidunt magna auctor sed. In mi ipsum, tincidunt vel rutrum quis, lacinia eu nulla. Praesent at erat in diam gravida posuere. Quisque dictum sollicitudin hendrerit. Phasellus fringilla iaculis leo, non imperdiet erat suscipit eget. Donec ac risus suscipit, ultricies metus vel, pulvinar diam. Nunc tincidunt nibh ut metus maximus ornare.
-
-                    Sed elementum ipsum ac neque accumsan faucibus. Mauris a dapibus erat. Sed sed est vitae ligula aliquam consectetur. Donec cursus, augue at sollicitudin commodo, velit lacus aliquam mauris, vitae bibendum lorem magna id nulla. Ut tempus velit eget libero imperdiet, ac dictum dui bibendum. Nunc pretium in libero eu varius. Donec ut metus vitae risus blandit laoreet eget eget nisi. Cras quam justo, vestibulum eget aliquet feugiat, faucibus vitae lorem.
-
-                    Sed et euismod ex, sit amet euismod turpis. Cras malesuada tristique nisl, eget cursus elit. Vestibulum dictum velit at mauris sollicitudin, at pretium libero fringilla. Aenean et lacinia ex. Ut laoreet tortor id neque convallis consectetur. Etiam venenatis, neque ut condimentum suscipit, urna purus pharetra augue, ultrices scelerisque ex orci non eros. Phasellus sit amet odio quis ligula consectetur tristique eget quis nibh. Pellentesque ut diam in quam aliquet elementum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mi dolor, vulputate nec fermentum quis, laoreet vitae ipsum. Ut lobortis neque congue auctor aliquam. Ut quis quam et magna tincidunt porttitor. Vivamus vitae nisi molestie, congue diam in, vehicula felis. In suscipit tristique mauris eget vulputate. Proin rutrum neque non lacus dignissim, at pulvinar diam molestie. Sed vehicula sed lectus sed rhoncus. Donec posuere vestibulum purus non condimentum. Aenean et fermentum ligula. Suspendisse consequat volutpat velit, vitae mattis nisl tincidunt nec. Nunc pretium venenatis purus at faucibus. Morbi ac sapien enim. Curabitur rutrum metus ut pretium venenatis. Vestibulum at ullamcorper elit, consectetur mattis nibh.
-
-                    Donec viverra diam a sodales venenatis. Suspendisse potenti. Fusce condimentum id felis nec sollicitudin. Vivamus efficitur nulla blandit felis sodales, sed laoreet libero iaculis. Aliquam gravida interdum mauris. Sed feugiat hendrerit eleifend. Praesent et libero ac justo efficitur venenatis vitae tempor sapien. Duis risus felis, varius nec fringilla eu, hendrerit at libero.
-
-                    Cras vitae sapien felis. In malesuada efficitur arcu vitae pulvinar. Nam vehicula urna nibh, vitae posuere libero vulputate nec. Aliquam erat volutpat. Proin et lectus ipsum. Vivamus imperdiet luctus urna, ac vulputate sem efficitur ut. Vestibulum ac turpis lectus. Etiam hendrerit ornare lacus, sit amet tincidunt magna auctor sed. In mi ipsum, tincidunt vel rutrum quis, lacinia eu nulla. Praesent at erat in diam gravida posuere. Quisque dictum sollicitudin hendrerit. Phasellus fringilla iaculis leo, non imperdiet erat suscipit eget. Donec ac risus suscipit, ultricies metus vel, pulvinar diam. Nunc tincidunt nibh ut metus maximus ornare.
-
-                    Sed elementum ipsum ac neque accumsan faucibus. Mauris a dapibus erat. Sed sed est vitae ligula aliquam consectetur. Donec cursus, augue at sollicitudin commodo, velit lacus aliquam mauris, vitae bibendum lorem magna id nulla. Ut tempus velit eget libero imperdiet, ac dictum dui bibendum. Nunc pretium in libero eu varius. Donec ut metus vitae risus blandit laoreet eget eget nisi. Cras quam justo, vestibulum eget aliquet feugiat, faucibus vitae lorem.
-
-                    Sed et euismod ex, sit amet euismod turpis. Cras malesuada tristique nisl, eget cursus elit. Vestibulum dictum velit at mauris sollicitudin, at pretium libero fringilla. Aenean et lacinia ex. Ut laoreet tortor id neque convallis consectetur. Etiam venenatis, neque ut condimentum suscipit, urna purus pharetra augue, ultrices scelerisque ex orci non eros. Phasellus sit amet odio quis ligula consectetur tristique eget quis nibh. Pellentesque ut diam in quam aliquet elementum.</p>
-            </div>
+              <header className="header">
+                <h1 className="title">Personified Culture</h1>
+              </header>
+              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
+              <div className="tabs-container">
+                  <Tabs onClick={this.updateTabs}>
+                      <Tab label="Cymatics - 1" />
+                      <Tab label="Spirituality - 2" />
+                      <Tab label="Divination - 3" />
+                      <Tab label="Luminaires - 4" />
+                  </Tabs>
+              </div>
+              <div className="content">
+                <Content
+                        tabIndex={this.state.tab}
+                        text={this.getText()}
+                        img={this.getImg()}
+                        aud={this.getAud()}
+                />
+              </div>
+          </div>
         </div>
-      </div>
     );
   }
 }
-/*
-  <Dice value={this.state.diceVal}/>
-   <button onClick={this.onRoll}>Roll</button>*/
-
 export default App;
