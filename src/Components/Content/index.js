@@ -43,14 +43,14 @@ class Content extends Component {
         let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
         axios.get(path)
             .then(response => {
-                let tmp = this.state.textContent;
+                let temporaryState = this.state.textContent;
                 if(flushState) {
-                    tmp = [null, null, null, null];
+                    temporaryState = [null, null, null, null];
                 }
-                tmp[this.props.tabIndex - 1] = response.data.text;
+                temporaryState[this.props.tabIndex - 1] = response.data.text;
                 this.setState({
                     textCatID: this.props.text.id,
-                    textContent: tmp
+                    textContent: temporaryState
                 });
             })
             .catch(error => {
@@ -91,6 +91,7 @@ class Content extends Component {
 
     }
 
+    
     render() {
         this.update();
         return (
