@@ -35,7 +35,7 @@ class Content extends Component {
 
     // Henter ut tekst via AJAX
     getText(flushState) {
-        let path = '/media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
+        let path = './media/text/'+this.props.text.name+'/text'+this.props.tabIndex+'.txt';
         axios.get(path)
             .then(response => {
 
@@ -56,12 +56,12 @@ class Content extends Component {
     }
 
     getAudioPath() {
-        return '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
+        return './media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
     }
 
     // Henter ut bilder via AJAX
     getImage(flushState) {
-        let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
+        let path = './media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
         axios.get(path)
             .then(response => {
 
