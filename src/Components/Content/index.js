@@ -59,19 +59,8 @@ class Content extends Component {
     }
 
     getAudioPath() {
-        let path = '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
-        return path;
+        return '/media/sounds/'+this.props.aud.name+'/sound'+this.props.tabIndex+'.mp3';
     }
-
-    update = () => {
-        if(this.state.textCatID !== this.props.text.id) {
-            this.getText(true);
-        }
-        else if(this.state.textContent[this.props.tabIndex-1] == null) {
-            this.getText(false);
-        }
-    }
-
 
     getImage(flushState) {
         let path = '/media/images/'+this.props.img.name+'/'+this.props.img.name+''+this.props.tabIndex+'/'+this.props.img.name+''+this.props.tabIndex+'.svg';
@@ -110,7 +99,11 @@ class Content extends Component {
                     <div className="image" dangerouslySetInnerHTML={{ __html: this.state.imageContent[this.props.tabIndex-1] }} />
                 </div>
                 <div className="textContainer">
-                    <pre className="TextContent">{this.state.textContent[this.props.tabIndex-1]}</pre>
+                    <pre className="TextContent">
+                        <blockquote>
+                            {this.state.textContent[this.props.tabIndex-1]}
+                        </blockquote>
+                    </pre>
                 </div>
                 <audio src={this.getAudioPath()} autoPlay="true" loop="true"/>
             </div>

@@ -11,6 +11,7 @@
     cursor: pointer;
     font-family: Bebas Neue, Verdana, serif;
     transition: padding 0.2s;
+    white-space: nowrap;
 }
 
 .tab-list-item:hover {
