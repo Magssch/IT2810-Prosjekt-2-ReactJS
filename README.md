@@ -38,9 +38,9 @@
 - Måten vi testet på var systematisk å gå igjennom flere forskjellige kombinasjoner av lyd, bilde og tekst. Slik forsikrert vi oss om at nettsiden oppførte seg slik vi ønsket med tanke på responsivitet, samt at den har lik utforming på tvers av enheter. Vi testet nettsiden både vertikalt og horisontalt på mobiltelefonen.
 
 Kilder:
-  Informasjon om hvordan å gå frem for å lage avkrysningsbokser.
+- Informasjon om hvordan å gå frem for å lage avkrysningsbokser.
 - https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
-  Informasjon om hvordan å gå frem for å lage faner.
+- Informasjon om hvordan å gå frem for å lage faner.
 - https://alligator.io/react/tabs-component/
 
 SVG:
