@@ -7,12 +7,27 @@
     display: inline-block;
     list-style: none;
     margin-bottom: -1px;
-    padding: 0.5rem 0.75rem;
+    padding: 1rem 1.5rem;
     cursor: pointer;
+    font-family: Bebas Neue, Verdana, serif;
+    transition: padding 0.2s;
+}
+
+.tab-list-item:hover {
+    background: #222 linear-gradient(to top, rgb(225, 225, 225), rgb(245, 245, 245));
 }
 
 .tab-list-active {
     background-color: white;
     border: solid #ccc;
     border-width: 1px 1px 0 1px;
+}
+
+
+.tab-list-item:hover {
+    background: #222 linear-gradient(to top, rgb(210, 210, 210), rgb(240, 240, 240));
+}
+
+@media screen and (max-width: 550px) {
+    .tab-list-item {padding: 1rem 0.75rem; font-size: 14px;}
 }

@@ -4,7 +4,6 @@ import Menu from './Components/Menu';
 import Tabs from './Components/Tabs';
 import Tab from './Components/Tabs/Tab';
 import Sidenav from './Components/Sidenav';
-import axios from 'axios';
 import Content from './Components/Content';
 
 
@@ -14,7 +13,6 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.categoryChange = this.categoryChange.bind(this);
-        this.updateTab = this.updateTab.bind(this);
     }
     state = {
         sidenavExpanded: "",
@@ -24,18 +22,18 @@ class App extends Component {
         categories: [
             {
                 id: 1,
-                name: "Bilder",
+                name: "Images",
                 options: [
                     {
                         id: 1,
                         name: "chairs",
-                        text: "Stoler",
+                        text: "Chairs",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lamps",
-                        text: "Lamper",
+                        text: "Lamps",
                         checked: false
                     },
                     {
@@ -48,42 +46,42 @@ class App extends Component {
             },
             {
                 id: 2,
-                name: "Lyd",
+                name: "Audio",
                 options: [
                     {
                         id: 1,
                         name: "folk",
-                        text: "Folkeinstrumenter",
+                        text: "Folk Instruments",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "string",
-                        text: "Strenginstrumenter",
+                        text: "String Instruments",
                         checked: false
                     },
                     {
                         id: 3,
                         name: "blow",
-                        text: "Blåseinstrumenter",
+                        text: "Wind Instruments",
                         checked: false
                     },
                 ]
             },
             {
                 id: 3,
-                name: "Tekst",
+                name: "Text",
                 options: [
                     {
                         id: 1,
                         name: "cites",
-                        text: "Sitater",
+                        text: "Quotes",
                         checked: true
                     },
                     {
                         id: 2,
                         name: "lyrics",
-                        text: "Sangtekster",
+                        text: "Lyrics",
                         checked: false
                     },
                     {
@@ -95,7 +93,7 @@ class App extends Component {
                 ]
             },
         ]
-    }
+    };
 
     sidenavExpand = () => {
         if(this.state.sidenavExpanded === "") {
@@ -130,12 +128,6 @@ class App extends Component {
         });
     }
 
-    updateTab() {
-        let tmp = this.state.tab;
-        if(tmp>3) tmp = 0;
-        this.setState({tab: tmp+1});
-    }
-
     updateTabs = (tab) => {
         let activeTab = parseInt(tab.slice(-1));
         if (this.state.tab !== activeTab) this.setState({tab: activeTab});
@@ -155,31 +147,30 @@ class App extends Component {
     getAud() {
         return this.getCategories()[1][0];
     }
-    
+
     render() {
     return (
-        <div className="App">
-            <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
-            <div className="page" onClick={this.sidenavClose}>
-            <header className="header">
-                <h1 className="title">Personified art</h1>
-            </header>
-                <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
-                <div className="tabs-container">
-                    <Tabs onClick={this.updateTabs}>
-                        <Tab label="First artwork1"/>
-                        <Tab label="Second artwork2"/>
-                        <Tab label="Third artwork3"/>
-                        <Tab label="Fourth artwork4"/>
-                    </Tabs>
-                </div>
-                <div className="content">
-                    <Content 
-                            tabIndex={this.state.tab} 
-                            text={this.getText()} 
-                            img={this.getImg()} 
-                            aud={this.getAud()}
-                    />
+      <div className="App">
+          <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
+          <div className="page" onClick={this.sidenavClose}>
+          <header className="header">
+              <h1 className="title">Ellevil interaktiv utstilling</h1>
+          </header>
+              <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
+            <div className="tabs-container">
+                  <Tabs onClick={this.updateTabs}>
+                      <Tab label="Verk 1" />
+                      <Tab label="Verk 2" />
+                      <Tab label="Verk 3" />
+                      <Tab label="Verk 4" />
+                  </Tabs>
+            </div>
+            <div className="content">
+                <Content
+                        tabIndex={this.state.tab}
+                        text={this.getText()}
+                        img={this.getImg()}
+                        aud={this.getAud()}/>
                 </div>
             </div>
         </div>
