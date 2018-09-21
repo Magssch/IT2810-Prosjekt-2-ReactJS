@@ -162,15 +162,15 @@ class App extends Component {
           <Sidenav value={this.state.sidenavExpanded} categories={this.state.categories} handleChange={this.categoryChange}/>
           <div className="page" onClick={this.sidenavClose}>
               <header className="header">
-                <h1 className="title">Personified Culture</h1>
+                <h1 className="title">Personified Art</h1>
               </header>
               <Menu onClick={this.sidenavExpand} value={this.state.menuClicked} />
               <div className="tabs-container">
                   <Tabs onClick={this.updateTabs}>
-                      <Tab label="Cymatics - 1" />
-                      <Tab label="Spirituality - 2" />
-                      <Tab label="Divination - 3" />
-                      <Tab label="Luminaires - 4" />
+                      <Tab label="1" />
+                      <Tab label="2" />
+                      <Tab label="3" />
+                      <Tab label="4" />
                   </Tabs>
               </div>
               <div className="content">
