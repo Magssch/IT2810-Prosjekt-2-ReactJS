@@ -1,1 +1,1 @@
-{"number":4,"author":"Adolf Hitler","text":"He who would live must fight. He who doesn't wish to fight in this world, where permanent struggle is the law of life, has not the right to exist."}
+{"number":4,"author":"Oscar Wilde","text":"Always forgive your enemies; nothing annoys them so much."}

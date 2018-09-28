@@ -1,1 +1,1 @@
-{"number":2,"author":"Adolf Hitler","text":"The art of reading and studying consists in remembering the essentials and forgetting what is not essential"}
+{"number":2,"author":"Mahatma Gandhi","text":"Be the change that you wish to see in the world."}
