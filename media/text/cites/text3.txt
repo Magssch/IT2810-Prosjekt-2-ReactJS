@@ -1,0 +1,1 @@
+{"number":3,"author":"Elbert Hubbard","text":"A friend is someone who knows all about you and still loves you."}

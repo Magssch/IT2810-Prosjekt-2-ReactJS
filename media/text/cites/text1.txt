@@ -1,0 +1,1 @@
+{"number":1,"author":"Dr. Seuss","text":"Don't cry because it's over, smile because it happened."}
